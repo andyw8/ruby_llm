@@ -81,15 +81,15 @@ module RubyLLM
       migration_template 'create_chats_migration.rb.tt',
                          "db/migrate/create_#{options[:chat_model_name].tableize}.rb"
 
-      # Then create tool_calls table
-      sleep 1 # Ensure different timestamp
-      migration_template 'create_tool_calls_migration.rb.tt',
-                         "db/migrate/create_#{options[:tool_call_model_name].tableize}.rb"
-
-      # Finally create messages table
+      # Then create messages table
       sleep 1 # Ensure different timestamp
       migration_template 'create_messages_migration.rb.tt',
                          "db/migrate/create_#{options[:message_model_name].tableize}.rb"
+
+      # Finally create tool_calls table
+      sleep 1 # Ensure different timestamp
+      migration_template 'create_tool_calls_migration.rb.tt',
+                         "db/migrate/create_#{options[:tool_call_model_name].tableize}.rb"
     end
 
     def create_model_files
