@@ -27,6 +27,7 @@ VCR.configure do |config|
   config.filter_sensitive_data('<AWS_SESSION_TOKEN>') { ENV.fetch('AWS_SESSION_TOKEN', nil) }
   config.filter_sensitive_data('<DEEPSEEK_API_KEY>') { ENV.fetch('DEEPSEEK_API_KEY', nil) }
   config.filter_sensitive_data('<GEMINI_API_KEY>') { ENV.fetch('GEMINI_API_KEY', nil) }
+  config.filter_sensitive_data('<HUGGING_FACE_API_KEY>') { ENV.fetch('HUGGING_FACE_API_KEY', nil) }
   config.filter_sensitive_data('<GOOGLE_CLOUD_LOCATION>') { ENV.fetch('GOOGLE_CLOUD_LOCATION', 'global') }
   config.filter_sensitive_data('<GOOGLE_CLOUD_PROJECT>') { ENV.fetch('GOOGLE_CLOUD_PROJECT', 'test-project') }
   config.filter_sensitive_data('<GPUSTACK_API_BASE>') { ENV.fetch('GPUSTACK_API_BASE', 'http://localhost:11444/v1') }

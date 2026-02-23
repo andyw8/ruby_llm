@@ -60,6 +60,7 @@ RubyLLM.configure do |config|
   config.perplexity_api_key = ENV['PERPLEXITY_API_KEY']
   config.openrouter_api_key = ENV['OPENROUTER_API_KEY']
   config.xai_api_key = ENV['XAI_API_KEY'] # Available in v1.11.0+
+  config.hugging_face_api_key = ENV['HUGGING_FACE_API_KEY']
 
   # Local providers
   config.ollama_api_base = 'http://localhost:11434/v1'
@@ -395,6 +396,7 @@ RubyLLM.configure do |config|
   config.openrouter_api_key = String
   config.gpustack_api_key = String
   config.xai_api_key = String
+  config.hugging_face_api_key = String
   config.azure_api_key = String  # v1.12.0+
   config.azure_ai_auth_token = String  # v1.12.0+
 

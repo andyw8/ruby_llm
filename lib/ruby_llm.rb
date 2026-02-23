@@ -21,6 +21,7 @@ loader.inflector.inflect(
   'bedrock' => 'Bedrock',
   'deepseek' => 'DeepSeek',
   'gpustack' => 'GPUStack',
+  'hugging_face' => 'HuggingFace',
   'llm' => 'LLM',
   'mistral' => 'Mistral',
   'openai' => 'OpenAI',
@@ -99,6 +100,7 @@ RubyLLM::Provider.register :bedrock, RubyLLM::Providers::Bedrock
 RubyLLM::Provider.register :deepseek, RubyLLM::Providers::DeepSeek
 RubyLLM::Provider.register :gemini, RubyLLM::Providers::Gemini
 RubyLLM::Provider.register :gpustack, RubyLLM::Providers::GPUStack
+RubyLLM::Provider.register :hugging_face, RubyLLM::Providers::HuggingFace
 RubyLLM::Provider.register :mistral, RubyLLM::Providers::Mistral
 RubyLLM::Provider.register :ollama, RubyLLM::Providers::Ollama
 RubyLLM::Provider.register :openai, RubyLLM::Providers::OpenAI
