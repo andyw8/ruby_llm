@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://router.huggingface.co/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"meta-llama/Llama-3.1-8B-Instruct","messages":[{"role":"user","content":"Hello"}],"stream":false}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.1
+      Authorization:
+      - Bearer invalid-key
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '41'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 23 Feb 2026 13:19:16 GMT
+      Etag:
+      - W/"29-dEMcHWfJi78ZR1aqzb1ELAhp3Us"
+      X-Powered-By:
+      - huggingface-moon
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash
+      X-Robots-Tag:
+      - none
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Error-Message:
+      - Invalid username or password.
+      Www-Authenticate:
+      - Bearer realm="Authentication required", charset="UTF-8"
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 b45dc877dacb6622decf2f047880d5ae.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - YTO50-P1
+      X-Amz-Cf-Id:
+      - lY610-t4peuagDS_BfGfP5GPzIpWFMJeHhOpqT6Z-8CYHriI9xbzVg==
+    body:
+      encoding: UTF-8
+      string: '{"error":"Invalid username or password."}'
+  recorded_at: Mon, 23 Feb 2026 13:19:16 GMT
+recorded_with: VCR 6.4.0
