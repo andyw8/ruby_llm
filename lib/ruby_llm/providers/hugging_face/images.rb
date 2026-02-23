@@ -20,7 +20,7 @@ module RubyLLM
           end.post("#{IMAGE_API_BASE}/#{model}") do |req|
             req.headers['Authorization'] = "Bearer #{@config.hugging_face_api_key}"
             req.headers['Content-Type'] = 'application/json'
-            req.headers['Accept'] = 'image/*'
+            req.headers['Accept'] = 'image/jpeg'
             req.body = payload
           end
 
