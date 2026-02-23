@@ -7,6 +7,7 @@ module RubyLLM
     # for chat completions and the HF Inference API for embeddings and images.
     class HuggingFace < OpenAI
       include HuggingFace::Chat
+      include HuggingFace::Images
 
       def api_base
         'https://router.huggingface.co/v1'
