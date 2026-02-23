@@ -14,7 +14,7 @@ module RubyLLM
           role.to_s
         end
 
-        def render_payload(messages, tools:, temperature:, model:, stream: false, schema: nil, _thinking: nil) # rubocop:disable Metrics/ParameterLists
+        def render_payload(messages, tools:, temperature:, model:, stream: false, schema: nil, thinking: nil) # rubocop:disable Metrics/ParameterLists,Lint/UnusedMethodArgument
           payload = {
             model: model.id,
             messages: format_messages(messages),
